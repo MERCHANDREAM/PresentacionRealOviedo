@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Propuesta Comercial — Real Oviedo</title>
+<link rel="icon" href="./assets/imgs/Dibujo01-NoBAK.ico" type="image/x-icon">
+<meta name="description" content="Presentación online de la propuesta comercial Real Oviedo." />
+<meta name="theme-color" content="#2d5da0" />
+<style>
+  :root {
+    --oviedo-primary: #2d5da0;
+    --oviedo-secondary: #1e3c72;
+    --oviedo-light: #5b8cde;
+    --oviedo-dark: #0f2a5a;
+    --oviedo-accent: #f1f5f9;
+    --text: #1f2937;
+    --text-light: #6b7280;
+    --border: #e5e7eb;
+    --radius: 12px;
+    --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background: linear-gradient(135deg, #f0f7ff 0%, #e6f0ff 100%);
+    position: relative;
+    min-height: 100vh;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBvcGFjaXR5PSIwLjA0Ij48cGF0aCBkPSJNMTUwLDQwIEEKMTIwLDIwIDgwLDIwIDUwLDQwIEEyMCwyMCAwIDAgMCA0MCw3MCBBMjAsMjAgMCAwIDAgNjAsOTAgQTIwLDIwIDAgMCAwIDgwLDcwIEEyMCwyMCAwIDAgMCAxMDAsOTAgQTIwLDIwIDAgMCAwIDEyMCw3MCBBMjAsMjAgMCAwIDAgMTQwLDkwIEEyMCwyMCAwIDAgMCAxNjAsNzAgQTIwLDIwIDAgMCAwIDE1MCw0MCBaIiBmaWxsPSIjMmQ1ZGEwIi8+PHRleHQgeD0iMTAwIiB5PSIxMTAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMTgiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSIjMmQ1ZGEwIj5STzwvdGV4dD48L2c+PC9zdmc+');
+    background-size: 200px;
+    background-repeat: repeat;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  /* Header */
+  header.site {
+    background: linear-gradient(135deg, var(--oviedo-primary) 0%, var(--oviedo-dark) 100%);
+    color: white;
+    padding: 15px 0;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .logo {
+    width: 60px;
+    height: 60px;
+    background: url('./assets/imgs/Dibujo01-BAK.png') center/cover no-repeat;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    border: 3px solid white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: var(--oviedo-primary);
+  }
+
+  .brand h1 {
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+
+  nav {
+    display: flex;
+    gap: 10px;
+  }
+
+  .btn {
+    padding: 10px 16px;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    border-radius: var(--radius);
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+    text-decoration: none;
+  }
+
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(135deg, var(--oviedo-primary) 0%, var(--oviedo-secondary) 100%);
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 5px solid var(--oviedo-light);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMTAiIGN5PSIxMCIgcj0iMyIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iMC4zIi8+PC9zdmc+') repeat-x;
+    background-size: 20px 20px;
+  }
+
+  .kicker {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    letter-spacing: 0.05em;
+  }
+
+  .hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: 800;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.9;
+  }
+
+  /* Grid & Cards */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+    margin-bottom: 50px;
+  }
+
+  section.card {
+    background: white;
+    border-radius: var(--radius);
+    padding: 25px;
+    box-shadow: var(--shadow);
+    border-top: 5px solid var(--oviedo-primary);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+  }
+
+  section.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, var(--oviedo-primary), var(--oviedo-light), var(--oviedo-primary));
+    border-radius: var(--radius) var(--radius) 0 0;
+  }
+
+  section.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+
+  section.card h3 {
+    color: var(--oviedo-primary);
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--border);
+  }
+
+  .media {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .price-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+  }
+
+  .price-table th {
+    background: var(--oviedo-primary);
+    color: white;
+    text-align: left;
+    padding: 12px 15px;
+  }
+
+  .price-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .price-table tr:last-child td {
+    border-bottom: none;
+  }
+
+  .price-table tr:nth-child(even) {
+    background: #f9fafb;
+  }
+
+  img {
+    width: 100%;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+  }
+
+  img:hover {
+    transform: scale(1.02);
+  }
+
+  /* Footer */
+  footer.site {
+    background: linear-gradient(135deg, var(--oviedo-dark) 0%, var(--oviedo-primary) 100%);
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    margin-top: 50px;
+    position: relative;
+  }
+
+  footer.site::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMTAiIGN5PSIxMCIgcj0iMyIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iMC4zIi8+PC9zdmc+') repeat-x;
+    background-size: 20px 20px;
+    transform: rotate(180deg);
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .topbar {
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    nav {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .hero h2 {
+      font-size: 2rem;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .container {
+      padding: 0 15px;
+    }
+    
+    .brand h1 {
+      font-size: 1.2rem;
+    }
+    
+    .btn {
+      padding: 8px 12px;
+      font-size: 0.9rem;
+    }
+    
+    .hero {
+      padding: 40px 0;
+    }
+    
+    .hero h2 {
+      font-size: 1.8rem;
+    }
+    
+    section.card {
+      padding: 20px;
+    }
+  }
+
+  /* Additional Styles */
+  .muted {
+    color: var(--text-light);
+    font-style: italic;
+  }
+
+  ul, ol {
+    padding-left: 20px;
+    margin: 15px 0;
+  }
+
+  li {
+    margin-bottom: 8px;
+  }
+
+  strong {
+    color: var(--oviedo-primary);
+  }
+
+  .anchor {
+    scroll-margin-top: 100px;
+  }
+
+  .oviedo-badge {
+    display: inline-block;
+    background: var(--oviedo-primary);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-left: 5px;
+    vertical-align: middle;
+  }
+</style>
+</head>
+<body>
+  <header class="site">
+    <div class="container topbar">
+      <div class="brand">
+        <div class="logo"></div>
+        <h1>Propuesta Comercial — Real Oviedo</h1>
+      </div>
+      <nav aria-label="Secciones">
+        <a class="btn" href="#precios">Precios</a>
+        <a class="btn" href="#aclaraciones">Aclaraciones</a>
+        <a class="btn" href="#recomendaciones">Recomendaciones</a>
+        <a class="btn" href="#forma-de-pago">Pago</a>
+        <a class="btn" href="#procedimientos">Procedimientos</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <span class="kicker">MERCHANDREAM</span>
+        <h2>Relación de Precios y Cantidades <span class="oviedo-badge">Carbayón</span></h2>
+        <p class="subtitle">Productos oficiales con los colores del Real Oviedo</p>
+      </div>
+    </section>
+
+    <div class="container grid" id="precios">
+
+      <section class="card anchor" id="apartado-1">
+        <h3>Apartado 1 — Tamaño 8 cm</h3>
+        <div class="media">
+          <div>
+            <p class="muted">Ideal para coleccionables y/o instalar en salpicaderos de vehículos.</p>
+            <table class="price-table" aria-label="Precios tamaño 8 cm">
+              <thead>
+                <tr>
+                  <th>Condición</th>
+                  <th>Precio</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Pedido mínimo</td>
+                  <td>100 unidades por jugador</td>
+                </tr>
+                <tr>
+                  <td>Precio unidad por avión</td>
+                  <td>7,65€ + IVA</td>
+                </tr>
+                <tr>
+                  <td>Precio por barco</td>
+                  <td>7,20€ + IVA</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <img src="./assets/imgs/dolls 8 cm.jpg" alt="Foto tamaño 8 cm Real Oviedo" />
+          </div>
+        </div>
+      </section>
+
+      <section class="card anchor" id="apartado-2">
+        <h3>Apartado 2 — Tamaño 14 cm</h3>
+        <div class="media">
+          <div>
+            <table class="price-table" aria-label="Precios tamaño 14 cm">
+              <thead>
+                <tr>
+                  <th>Condición</th>
+                  <th>Precio</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Pedido mínimo</td>
+                  <td>100 unidades por jugador</td>
+                </tr>
+                <tr>
+                  <td>Precio unidad por avión</td>
+                  <td>11,90€ + IVA</td>
+                </tr>
+                <tr>
+                  <td>Precio por barco</td>
+                  <td>10,40€ + IVA</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <img src="./assets/imgs/dolls 14cm.jpg" alt="Foto tamaño 14 cm Real Oviedo" />
+          </div>
+        </div>
+      </section>
+
+      <section class="card anchor" id="apartado-3">
+        <h3>Apartado 3 — Tamaño 18 cm</h3>
+        <div class="media">
+          <div>
+            <table class="price-table" aria-label="Precios tamaño 18 cm">
+              <thead>
+                <tr>
+                  <th>Condición</th>
+                  <th>Precio</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Pedido mínimo</td>
+                  <td>100 unidades por jugador</td>
+                </tr>
+                <tr>
+                  <td>Precio unidad por avión</td>
+                  <td>13,50€ + IVA</td>
+                </tr>
+                <tr>
+                  <td>Precio por barco</td>
+                  <td>11,40€ + IVA</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <img src="./assets/imgs/dolls 18cm.jpg" alt="Foto tamaño 18 cm Real Oviedo" />
+          </div>
+        </div>
+      </section>
+
+      <section class="card anchor" id="apartado-4">
+        <h3>Apartado 4 — Tamaño 18 cm + sonido</h3>
+        <div class="media">
+          <div>
+            <table class="price-table" aria-label="Precios tamaño 18 cm + sonido">
+              <thead>
+                <tr>
+                  <th>Condición</th>
+                  <th>Precio</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Pedido mínimo</td>
+                  <td>100 unidades por jugador</td>
+                </tr>
+                <tr>
+                  <td>Precio unidad por avión</td>
+                  <td>17€ + IVA</td>
+                </tr>
+                <tr>
+                  <td>Precio por barco</td>
+                  <td>14,90€ + IVA</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <img src="./assets/imgs/dolls 18 cm con sonido.jpg" alt="Foto tamaño 18 cm con sonido Real Oviedo" />
+          </div>
+        </div>
+      </section>
+
+      <section class="card anchor" id="apartado-5">
+        <h3>Apartado 5 — Tamaño 40 cm</h3>
+        <div class="media">
+          <div>
+            <table class="price-table" aria-label="Precios tamaño 40 cm">
+              <thead>
+                <tr>
+                  <th>Condición</th>
+                  <th>Precio</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Pedido mínimo</td>
+                  <td>50 unidades por jugador</td>
+                </tr>
+                <tr>
+                  <td>Precio unidad por avión</td>
+                  <td>90€ + IVA</td>
+                </tr>
+                <tr>
+                  <td>Precio por barco</td>
+                  <td>75€ + IVA</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <img src="./assets/imgs/dolls 40 cm.jpg" alt="Foto tamaño 40 cm Real Oviedo" />
+          </div>
+        </div>
+      </section>
+
+      <section class="card anchor" id="apartado-6">
+        <h3>Apartado 6 — Muñecos de pared tamaño 90×40×90 cm</h3>
+        <div class="media">
+          <div>
+            <table class="price-table" aria-label="Precios muñecos de pared 90x40x90 cm">
+              <thead>
+                <tr>
+                  <th>Condición</th>
+                  <th>Precio</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Pedidos mínimos</td>
+                  <td>10 unidades por jugador.</td>
+                </tr>
+                <tr>
+                  <td>Precio unidad por barco</td>
+                  <td>600€ + IVA</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <img src="./assets/imgs/dolls pared.jpg" alt="Foto muñeco de pared Real Oviedo" />
+          </div>
+        </div>
+      </section>
+
+      <section class="card anchor" id="apartado-7">
+        <h3>Apartado 7 — Muñecos a tamaño real 2 m</h3>
+        <div class="media">
+          <div>
+            <table class="price-table" aria-label="Precios muñecos a tamaño real 2 m">
+              <thead>
+                <tr>
+                  <th>Condición</th>
+                  <th>Precio</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Precio por unidad</td>
+                  <td>3000€ + IVA</td>
+                </tr>
+                <tr>
+                  <td>Transporte</td>
+                  <td>Por barco</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <img src="./assets/imgs/doll tamaño real.jpg" alt="Foto muñeco a tamaño real Real Oviedo" />
+            <img src="./assets/imgs/Real01.png" alt="Real" />
+          </div>
+        </div>
+      </section>
+
+      <section class="card anchor" id="apartado-8">
+        <h3>Apartado 8 — Muñecos Vintage de 14 cm</h3>
+        <div class="media">
+          <div>
+            <table class="price-table" aria-label="Precios muñecos vintage 14 cm">
+              <thead>
+                <tr>
+                  <th>Condición</th>
+                  <th>Precio</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Pedidos mínimos</td>
+                  <td>100 unidades por jugador</td>
+                </tr>
+                <tr>
+                  <td>Precio unidad por avión</td>
+                  <td>9,90€ + IVA</td>
+                </tr>
+                <tr>
+                  <td>Precio por barco</td>
+                  <td>7,90€ + IVA</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <img src="./assets/imgs/4 futbolistas.jpg" alt="Foto muñeco vintage Real Oviedo fútbol" />
+            <img src="./assets/imgs/3 baloncesto.jpg" alt="Leyendas Real Oviedo" />
+          </div>
+        </div>
+      </section>
+
+      <section class="card anchor" id="aclaraciones">
+        <h3>Aclaraciones</h3>
+        <p>Diferenciamos los precios del transporte por avión o por barco con el fin de llegar a la campaña de Navidad,
+          por lo que deberíamos usar el transporte aéreo. El barco tarda 45 días en llegar.</p>
+      </section>
+
+      <section class="card anchor" id="recomendaciones">
+        <h3>Recomendaciones <span class="oviedo-badge">Especial Carbayón</span></h3>
+        <ul>
+          <li>Hacer los muñecos de la mascota Carbayín, tamaño 18cm con sonido o sin sonido.</li>
+          <li>Tener los muñecos de jugadores emblemáticos como Michu, Jonathan Vila o Borja Sánchez.</li>
+          <li>Hacer 1 o 2 muñecos a tamaño real de la mascota (máximo 2 metros) para deleite de la afición carbayona.</li>
+          <li>Comezar a programar la colección de los jugadores históricos con tamaño de 8cm de cara del año que viene.</li>
+        </ul>
+      </section>
+
+      <section class="card anchor" id="forma-de-pago">
+        <h3>Forma de Pago</h3>
+        <p>Para que el Club no tenga que hacer un desembolso inicial, podemos proporcionar el producto para la
+          campaña de Navidad y que el pago se realice el 1 de febrero.</p>
+      </section>
+
+      <section class="card anchor" id="procedimientos">
+        <h3>Procedimientos</h3>
+        <ol>
+          <li>Firma del pedido bajo contrato</li>
+          <li>Se realizan las muestras para su aprobación</li>
+          <li>Se realiza la fabricación.</li>
+          <li>Envío de producto.</li>
+        </ol>
+        <img src="./assets/imgs/foto mascotas.jpg" alt="Foto mascotas Real Oviedo" />
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site">
+    <div class="container">
+      <p>© <span id="y"></span> Propuesta Comercial — Real Oviedo · Presentación online.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // año actual en el pie
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
